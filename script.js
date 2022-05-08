@@ -15,9 +15,14 @@ $(document).ready(function(){
 
                 p= `<div class= "well">
 
-                <span>
-                ${person.name.title} 
-                </span>
+                <img src="${person.picture.medium}" class="rounded" >
+
+                <span>${person.name.title} </span>
+
+                <span> ${person.name.first}</span>
+
+                <span> ${person.name.last}</span>
+
 
                 </div>
                 
