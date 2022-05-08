@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
-alert("jquery is included");
 
+    var url= "https://randomuser.me/api/";
+
+    fetch(url)
+    .then((response) => (response.json()))
+    .then(function(data){
+
+        console.log(data);
+
+    });
 });
