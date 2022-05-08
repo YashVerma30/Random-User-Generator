@@ -13,7 +13,17 @@ $(document).ready(function(){
     
             data.results.forEach(person => {
 
+                p= `<div class= "well">
 
+                <span>
+                ${person.name.title} 
+                </span>
+
+                </div>
+                
+                `;
+
+                $("#results").append(p);
 
                 });
         });
