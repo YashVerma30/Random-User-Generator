@@ -23,6 +23,8 @@ $(document).ready(function(){
 
                 <span> ${person.name.last}</span>
 
+                <span style="margin-left:420px;">Email: ${person.email}</span>
+
 
                 </div>
                 
