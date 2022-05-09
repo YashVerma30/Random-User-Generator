@@ -1,11 +1,25 @@
 $(document).ready(function(){
 
+    var radioGender = "Male";
+    var selectedNationality = "AU";
 
-    var url= "https://randomuser.me/api/?results=10&gender=male&nat=AU";
+    var url= "https://randomuser.me/api/?results=10&gender=male&nat="+selectedNationality;
     var p= "";
     var loadMore;
 
     fetchinformation(url); 
+
+$("input[type='radio]").click(function(){
+
+ $("#results").empty();
+
+  url= "https://randomuser.me/api/?results=10&gender=male&nat="+selectedNationality;
+if(radioGender){
+
+    fetchinformation(url);
+}
+});
+
 
      function fetchinformation(url){
         fetch(url)
@@ -23,6 +37,8 @@ $(document).ready(function(){
                 <span> ${person.name.first}</span>
 
                 <span> ${person.name.last}</span>
+
+                <span> (${person.nat})</span>
 
                 <span style="margin-left:420px;">Email: ${person.email}</span>
 
